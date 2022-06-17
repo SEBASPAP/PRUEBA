@@ -149,23 +149,27 @@ public class Estudiante extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
-        String [] params = new String[4];
+
+            if(evt.getSource().equals(this.jButton2)){
+            System.out.println(this.estudianteControl.listar().toString());
+        }
+            
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            String [] params = new String[4];
             params[0]=txtcodigo.getText();
             params[1]=txtnombre.getText();
             params[2]=txtedad.getText();
             params[3]=txtcurso.getText();
             
             this.estudianteControl.crear(params); 
-            System.out.println(this.estudianteControl.listar().toString());
-            
+
             txtcodigo.setText("");
             txtnombre.setText("");
             txtedad.setText("");
             txtcurso.setText("");
-    }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
